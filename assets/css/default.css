@@ -1,0 +1,168 @@
+/**** VARIABLES ****/
+:root {
+  --breakpoint: 900px;
+  --colorRed: #FC0D1B;
+  --colorBlack: #121212;
+  --colorBlackStrong: #000000;
+  --colorGrayLight: #E5E5E5;
+  --colorGrayMedium: #4F4F4F;
+  --fontDefault: "Azeret Mono", "The Future Mono 02", monospace;
+  --fontSerif: "Noto Serif Display", "Times New Roman", Times, serif;
+  --fontMono: "Azeret Mono", "The Future Mono 02", monospace;
+  --fontSansSerif: Inter, "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  --fontArticle: "Open Sans", arial, helvetica, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+.gh-main {
+	padding: 10rem 0 !important;
+}
+
+body {
+  text-rendering: optimizespeed;
+	font: 1rem var(--fontDefault);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {max-width: 100%;}
+
+h1,h2,h3,h4,h5,h6 {
+  color: var(--color-darker-gray);
+}
+
+a:hover,
+a:hover h1 {
+  color: var(--colorRed);
+}
+
+.po-limit-container {
+  max-width: 1200px;
+  margin: auto;
+}
+.po-limit-container-mini {
+  max-width: 720px;
+  margin: auto;
+}
+
+.po-author-name {
+	text-transform: uppercase;
+	font: 700 1.3rem var(--fontDefault);
+	letter-spacing: .3;
+}
+
+.po-home-authors-list li {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.po-home-authors-list li a {
+  display: flex;
+  align-items: center;
+}
+
+.po-home-authors-list li figure {
+  flex: 1;
+  max-width: 80px;
+  align-self: flex-start;
+}
+
+.po-home-authors-list li div {
+
+}
+
+.po-home-authors-list img {
+  max-width: 70px;
+  /*float: left;*/
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.po-home-authors-list h4,
+.po-home-authors-list p {
+  flex: 1;
+  overflow: hidden;
+}
+
+.po-home-authors-list h4 {
+  font: 700 1.7rem var(--fontDefault);
+  text-transform: uppercase;
+}
+
+.po-home-authors-list p {
+  font: 1.5rem/1.4 var(--fontSansSerif);
+}
+
+/***
+ * Authors Page
+***/
+
+.po-authors-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+.po-authors-list li {
+  flex: 1 300px;
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  text-align: center;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.po-authors-list li .gh-author-image {
+  margin: 0 auto;
+  width: 120px;
+  height:  120px;
+  max-width: 120px;
+}
+
+.po-authors-list .po-author-link:hover h2 {
+  color: var(--colorRed);
+}
+.po-authors-list h2 {
+  font: 600 2rem/1.4 var(--fontDefault);
+  padding: 10px 0;
+}
+.po-authors-list p {
+  font: 1.3rem/1.4 var(--fontSansSerif);
+  margin-bottom: 10px;
+}
+
+.po-author-social {padding:  10px 0 0}
+.po-author-website:hover {color: var(--colorRed);}
+
+/***
+ * Changes Overwrite
+***/
+.po-ghost-template .gh-wrapper.gh-wrapper-home {
+  grid-template-columns: 3fr 2fr 1.8fr;
+}
+
+.po-ghost-template .gh-wrapper.gh-wrapper-home {
+  column-gap: 3.4rem;
+}
+
+@media only screen and (max-width: 900px) {
+  
+  .gh-inner {
+    padding: 0 20px;
+  }
+  .po-ghost-template .gh-wrapper.gh-wrapper-home {
+    grid-template-columns: 1fr;
+  }
+}

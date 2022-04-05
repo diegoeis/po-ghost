@@ -1,0 +1,45 @@
+  <aside class="po-article-sidebar">
+  {{#is "post"}}
+    <!-- {{#primary_author}}
+    <figure class="gh-author-image">
+      {{#if profile_image}}
+      <img src="{{profile_image}}" alt="{{name}}">
+      {{else}}
+      <div class="gh-author-icon">{{> icons/avatar}}</div>
+      {{/if}}
+    </figure>
+
+    <h4 class="gh-author-name">
+      <a href="{{url}}">{{name}}</a>
+    </h4>
+    {{/primary_author}} -->
+<!-- 
+    <div class="gh-article-meta">
+
+      {{#if reading_time}}
+      <span class="gh-article-meta-sep"></span>
+      <span class="gh-article-length">{{reading_time minute="1 min" minutes="% min"}}</span>
+      {{/if}}
+    </div> -->
+
+    <div class="po-sidebar-sticky">
+
+      {{#get "posts" limit="5" filter="id:-{{id}}+tag:{{primary_tag.slug}}"}}
+      <nav class="po-sidebar-related">
+        <h2 class="po-sidebar-title">Relacionados</h2>
+        <ul>
+      {{#foreach posts}}
+        <li><a href="{{url}}">{{title}}</a></li>
+      {{/foreach}}
+      {{/get}}
+        </ul>
+      </nav>
+
+      <div class="po-sidebar-banner">
+        <a href="#"><img src="https://productoversee.com/images/sponsors/ituring-banner.png"></a>
+      </div>
+    </div>
+
+  {{/is}}
+  </aside>
+

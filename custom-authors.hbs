@@ -1,0 +1,44 @@
+{{!< default}}
+
+
+{{#post}}
+
+  <header class="gh-article-header gh-canvas">
+    <h1 class="po-title">{{title}}</h1>
+    <p class="po-article-excerpt">{{excerpt}}</p>
+  </header>
+
+  {{#get 'authors' limit='all' include='count.posts' order='count.posts desc'}}
+    <ul class="po-authors-list">
+      {{#foreach authors}}
+        <li class="po-author-card">
+            <a class="po-author-link" href="{{url}}">
+          {{#if profile_image}}
+              <img class="gh-author-image" src="{{profile_image}}" alt="{{name}}">
+            {{else}}
+            <img class="gh-author-image" src="{{asset 'images/author-logo.png'}}">
+
+          {{/if}}
+                <h2>{{name}}</h2>
+                <p>{{bio}}</p>
+                  {{#if location}}
+                  <span class="po-author-location">📍 {{location}}</span>
+                  {{/if}}                
+                {{#if website}}
+                  <a class="po-author-website" href="{{website}}" target="_blank" rel="noopener">{{website}}</a>
+                {{/if}}
+            </a>
+            <div class="po-author-social">
+              {{#if twitter}}
+              <a class="po-author-twitter" href="{{twitter_url}}" target="_blank" rel="noopener">{{> icons/twitter}}</a>
+              {{/if}}
+              {{#if facebook}}
+              <a class="po-author-facebook" href="{{facebook_url}}" target="_blank" rel="noopener">{{> icons/facebook}}</a>
+              {{/if}}
+            </div>
+        </li>
+      {{/foreach}}
+    </ul>
+  {{/get}}
+{{/post}}
+

@@ -1,0 +1,29 @@
+{{!< default}}
+
+<div class="gh-canvas">
+    {{#tag}}
+        <section class="gh-pagehead">
+            <header class="gh-pagehead-content">
+                <div class="gh-tag-label">Assunto</div>
+
+                <h1 class="gh-tag-name gh-pagehead-title">{{name}}</h1>
+
+                <div class="gh-tag-description gh-pagehead-description">
+                    {{#if description}}
+                        {{description}}
+                    {{else}}
+                        Uma coleção de {{plural ../pagination.total empty="0 artigos" singular="% artigo" plural="% artigos"}}
+                    {{/if}}
+                </div>
+            </header>
+        </section>
+    {{/tag}}
+
+    <div class="gh-feed">
+        {{#foreach posts}}
+            {{> loop}}
+        {{/foreach}}
+    </div>
+
+    <button class="gh-loadmore gh-btn">Carregar mais</button>
+</div>

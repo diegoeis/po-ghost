@@ -1,0 +1,173 @@
+{{!< default}}
+<!-- 
+{{#get "posts" limit="all"}}
+    {{#foreach posts}}
+         <p>{{url}}</p>
+    {{/foreach}}
+{{/get}} -->
+
+
+    <section class="po-home-highlight">
+      
+      <div class="po-past-posts">
+        <ul>
+          {{#get "posts" limit="all" include="authors"}}
+            {{#foreach posts from=15 limit=2}}
+            <li>
+          {{> productoversee_partials/po_home_post_sponsor}}
+
+              <a href="{{url}}" class="po-past-post-img"><img src="{{feature_image}}" alt="{{feature_image_alt}}"></a>
+              <span class="po-author-name">{{authors  separator=" &bull; "}}</span>
+              <h2><a href="{{url}}">{{title}}</a></h2>
+            </li>
+            {{/foreach}}
+          {{/get}}
+        </ul>
+      </div>
+
+      {{#get "posts" limit="1" include="authors"}}
+        {{#foreach posts}}
+          <div class="po-featured-home">
+
+          {{> productoversee_partials/po_home_post_sponsor}}
+
+            <a href="{{url}}">
+              <img src="{{feature_image}}" alt="{{feature_image_alt}}">
+            </a>
+            <a href="{{url}}" class="po-featured-link">
+              <h1>{{title}}</h1>
+              <p>{{excerpt}}</p>
+            </a>
+            <span class="po-author-name">{{authors  separator=" &bull; "}}</span>
+          </div>
+        {{/foreach}}
+      {{/get}}
+
+      <div class="po-latest-posts">
+        <ul>
+          {{#get "posts" limit="all" include="authors"}}
+            {{#foreach posts from=2 limit=4}}
+            <li>
+              <a href="{{url}}" class="po-latest-post-img"><img src="{{feature_image}}" alt="{{feature_image_alt}}"></a>
+              <h3><a href="{{url}}">{{title}}</a></h3>
+              <span class="po-author-name">{{authors  separator=" &bull; "}}</span>
+            </li>
+            {{/foreach}}
+          {{/get}}
+        </ul>
+      </div>
+    </section>
+
+    <div class="gh-wrapper gh-wrapper-home">
+      <section class="gh-section">
+        <h2 class="gh-section-title">Últimos</h2>
+
+        <div class="gh-feed">
+          {{#foreach posts from="2"}}
+          {{> loop}}
+          {{/foreach}}
+        </div>
+
+        {{#match posts.length "=" 1}}
+        Additional issues will be published soon.
+        {{/match}}
+
+        <button class="gh-loadmore gh-btn">Carregar mais artigos</button>
+      </section>
+      <section class="po-home-authors-list">
+        <h2 class="gh-section-title">Autores</h2>
+        <ul>
+    {{#get 'authors' limit='all' include='count.posts' order='count.posts desc'}}
+        {{#foreach authors}}
+
+          <li>
+            <a class="post-card-image-link" href="{{url}}">
+            {{#if profile_image}}
+              <figure>
+                <img src="{{profile_image}}">
+              </figure>
+            {{/if}}
+              <div>
+                <h4 class="post-card-title">{{name}}</h4>
+                <p>{{bio}}</p>
+              </div>
+            </a>
+          </li>
+
+        {{/foreach}}
+    {{/get}}
+        </ul>
+
+      </section>
+      <aside class="gh-sidebar">
+        <section class="gh-section">
+          <h2 class="gh-section-title">Vem com a gente</h2>
+
+          <div class="gh-about">
+            {{#if @site.icon}}
+            <img class="gh-about-icon" src="{{@site.icon}}" alt="{{@site.title}}">
+            {{/if}}
+
+            <section class="gh-about-wrapper">
+              <h3 class="gh-about-title">{{@site.title}}</h3>
+
+              {{#if @site.description}}
+              <p class="gh-about-description">{{@site.description}}</p>
+              {{/if}}
+            </section>
+          </div>
+
+          {{^if @member.paid}}
+          <div class="gh-signup">
+            {{^if @member}}
+            <p class="gh-signup-description">Apoio nosso projeto e tenha acesso à conteúdo para assinantes.</p>
+
+            <a class="gh-subscribe-input" href="#/portal/signup" data-portal="signup">
+              <div class="gh-subscribe-input-text">
+                {{> icons/email}}
+                
+                
+              </div>
+              <div class="gh-subscribe-input-btn">Inscreva-se</div>
+            </a>
+            {{else}}
+            <p class="gh-signup-description">Faça um upgrade para um plano pago.</p>
+            <a class="gh-signup-btn gh-btn gh-primary-btn" href="#/portal/account/plans" data-portal="account/plans">Colaborar agora</a>
+            {{/if}}
+          </div>
+          {{/if}}
+        </section>
+<!-- 
+        {{#get "posts" filter="featured:true" limit="all" as |featured|}}
+        {{#if featured}}
+        <section class="gh-section">
+          <h3 class="gh-section-title">Featured</h3>
+
+          <div class="gh-featured gh-feed">
+            {{#foreach featured}}
+            {{> loop}}
+            {{/foreach}}
+          </div>
+        </section>
+        {{/if}}
+        {{/get}} -->
+
+        {{#get "tags" include="count.posts" limit="all" as |topic|}}
+        <section class="gh-section">
+          <h3 class="gh-section-title">Topics</h3>
+
+          <div class="gh-topic">
+            {{#foreach topic}}
+            <a class="gh-topic-item" href="{{url}}">
+              <h3 class="gh-topic-name">{{name}}</h3>
+              <span class="gh-topic-count">
+                {{plural count.posts empty="0 issues" singular="% issue" plural="% issues"}}
+              </span>
+            </a>
+            {{/foreach}}
+          </div>
+        </section>
+        {{/get}}
+      </aside>
+    </div>
+  

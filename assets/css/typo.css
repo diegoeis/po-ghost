@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Azeret+Mono:wght@100;300;400;600,700,900&family=Noto+Serif+Display:wght@300;400;600;800&display=swap');
+
+h2.gh-card-title {
+	font: 700 2.3rem var(--fontDefault);
+
+}

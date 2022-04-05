@@ -1,0 +1,33 @@
+<header id="po-head">
+	<div class="po-head-inner">
+		<div class="po-head-brand">
+			<a class="po-head-logo" href="{{@site.url}}">
+				{{#if @site.logo}}
+				<img src="{{@site.logo}}" alt="{{@site.title}}">
+				{{else}}
+				{{@site.title}}
+				{{/if}}
+			</a>
+			<button class="po-burger"></button>
+		</div>
+
+		<div class="po-head-actions">
+		{{navigation type="secondary"}}
+			<!-- {{#unless @member}}
+			<a class="po-head-btn" href="#/portal/signup" data-portal="signup">
+				{{> icons/email}}
+				Inscreva-se
+			</a>
+			{{else}}
+			<a class="po-head-btn" href="#/portal/account" data-portal="account">Conta</a>
+			{{/unless}} -->
+		</div>
+	</div>
+
+	<nav class="po-head-menu">
+		<div class="po-head-inner">
+		{{navigation}}
+		</div>
+	</nav>
+
+</header>

@@ -1,0 +1,24 @@
+{{!< default}}
+    {{#post}}
+<header class="po-article-header">
+  <div class="po-limit-container">
+
+    <h1 class="po-article-title">{{title}}</h1>
+
+    {{#if custom_excerpt}}
+    <p class="po-article-excerpt">{{custom_excerpt}}</p>
+    {{/if}}
+
+  </div>
+
+</header>
+
+{{#get "posts" limit="all"}}
+<div class="po-limit-container-mini">
+  {{#foreach posts}}
+   {{>loop}}
+  {{/foreach}}
+</div>
+{{/get}}
+
+{{/post}}
