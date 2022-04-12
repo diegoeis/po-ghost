@@ -1,0 +1,38 @@
+<div id="po-endpage">
+
+
+  <footer id="po-footer">
+    <a href="/" class="po-footer-logo">
+      <img src="{{asset "images/logo-bg-black.png"}}" alt="">
+    </a>
+    <div class="po-footer-navs">
+      <div class="po-limit-container">
+        
+        <nav class="po-footer-menu">
+          <h3>Categorias</h3>
+					{{navigation}}
+        </nav>
+        <nav class="po-secondary">
+        {{navigation type="secondary"}}
+        </nav>
+      </div>
+    </div>
+    <p class="po-footer-manifest">Somos um grupo de pessoas atuantes na área de gestão de Serviços Digitais, que colaboram, experimentam e provocam a busca por novos pontos de vista, impulsionando o pensamento crítico e a maestria das pessoas que constróem serviços e produtos digitais no Brasil.</p>
+  </footer>
+
+  
+</div>
+
+
+
+  {{#is "post, page"}}
+  {{> pswp}}
+  {{/is}}
+
+  <script src="{{asset "built/main.min.js"}}"></script>
+
+  {{ghost_foot}}
+</body>
+
+</html>
+

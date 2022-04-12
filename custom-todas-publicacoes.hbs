@@ -13,11 +13,21 @@
 
 </header>
 
-{{#get "posts" limit="all"}}
-<div class="po-limit-container-mini">
+{{#get "posts" limit="all" include="authors"}}
+<div class="po-limit-container">
+  <ul class="po-list-cards">
   {{#foreach posts}}
-   {{>loop}}
+   <li class="po-card">
+     <a href="{{url}}">
+      <img src="{{feature_image}}" alt="{{feature_image_alt}}">
+     </a>
+
+      <span class="po-author-name">{{authors  separator=" &bull; "}}</span>
+     
+      <h2><a href="{{url}}">{{title}}</a></h2>
+   </li>
   {{/foreach}}
+  </ul>
 </div>
 {{/get}}
 

@@ -1,33 +1,47 @@
 <header id="po-head">
-	<div class="po-head-inner">
-		<div class="po-head-brand">
-			<a class="po-head-logo" href="{{@site.url}}">
-				{{#if @site.logo}}
-				<img src="{{@site.logo}}" alt="{{@site.title}}">
-				{{else}}
-				{{@site.title}}
-				{{/if}}
-			</a>
-			<button class="po-burger"></button>
-		</div>
+  <div class="po-head-inner">
+    <div class="po-head-brand">
+      <a class="po-head-logo" href="{{@site.url}}">
+        {{#if @site.logo}}
+        <img src="{{@site.logo}}" alt="{{@site.title}}">
+        {{else}}
+        {{@site.title}}
+        {{/if}}
+      </a>
+      <button class="po-burger"></button>
+    </div>
 
-		<div class="po-head-actions">
-		{{navigation type="secondary"}}
-			<!-- {{#unless @member}}
-			<a class="po-head-btn" href="#/portal/signup" data-portal="signup">
-				{{> icons/email}}
-				Inscreva-se
-			</a>
-			{{else}}
-			<a class="po-head-btn" href="#/portal/account" data-portal="account">Conta</a>
-			{{/unless}} -->
-		</div>
-	</div>
+    <div class="po-head-actions">
+    
+      <ul class="po-social-icons">
+        {{#if @custom.show_social_telegram}}<li class="po-social-telegram"><a target="_new" data-event="lnk-telegram-header" href="https://t.me/productoversee">Telegram</a></li>{{/if}}
+        {{#if @custom.show_social_instagram}}<li class="po-social-instagram"><a target="_new" data-event="lnk-instagram-header" href="https://www.instagram.com/productoversee/">Instagram</a></li>{{/if}}
+        {{#if @custom.show_social_twitter}}<li class="po-social-twitter"><a target="_new" data-event="lnk-twitter-header" href="https://twitter.com/productoversee/">Twitter</a></li>{{/if}}
+        {{#if @custom.show_social_linkedin}}<li class="po-social-linkedin"><a target="_new" data-event="lnk-linkedin-header" href="https://www.linkedin.com/company/product-oversee/">Linkedin</a></li>{{/if}}
+        {{#if @custom.show_social_rss}}<li class="po-social-rss"><a target="_new" data-event="lnk-rss-header" href="{{site_url}}/rss/">RSS</a></li>{{/if}}
+      </ul>
 
-	<nav class="po-head-menu">
-		<div class="po-head-inner">
-		{{navigation}}
-		</div>
-	</nav>
+      {{navigation type="secondary"}}
+    </div>
+  </div>
+
+  <div class="po-head-menu">
+    <div class="po-head-inner">
+    {{navigation}}
+
+      <div class="po-account">
+        {{#unless @member}}
+        <a class="po-btn" href="#/portal/signup" data-portal="signup">
+          <!-- {{> icons/email}} -->
+          Inscreva-se
+        </a>
+        ou 
+        <a href="#/portal/signin" data-portal="signin">Entrar</a>
+        {{else}}
+        <a class="po-btn" href="#/portal/account" data-portal="account">Conta</a>
+        {{/unless}} 
+      </div>
+    </div>
+  </div>
 
 </header>

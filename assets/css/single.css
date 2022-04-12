@@ -43,6 +43,11 @@
 	margin: 0 auto;
 }
 
+.po-content ul,
+.po-content ol {
+	margin: 25px 20px;
+}
+
 .po-content p {
 	font: 1.7rem/1.5 var(--fontSansSerif);
 	margin-top: 20px;
@@ -64,8 +69,8 @@
 
 .po-author-article-footer {
 	list-style: none;
-	margin: 7rem 0 5rem;
-	padding: 0rem 0;
+	margin: 7rem 0 5rem !important;
+	padding: 0;
 }
 
 .po-author-article-footer p {
@@ -96,9 +101,6 @@
 /***
  * Sidebar post
 ***/
-.po-article-sidebar {
-
-}
 
 .po-sidebar-title {
 	font: 600 2.5rem/1.2 var(--fontDefault);
@@ -158,3 +160,12 @@
 .po-sponsor-post li img {
 	margin-right: 15px;
 }
+
+ 
+.po-banner-second,
+.po-show-banner-second .po-banner-first {display: none;}
+.po-show-banner-second .po-banner-second {display: block;}
+
+
+
+

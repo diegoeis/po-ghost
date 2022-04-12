@@ -1,11 +1,4 @@
 {{!< default}}
-<!-- 
-{{#get "posts" limit="all"}}
-    {{#foreach posts}}
-         <p>{{url}}</p>
-    {{/foreach}}
-{{/get}} -->
-
 
     <section class="po-home-highlight">
       
@@ -17,8 +10,8 @@
           {{> productoversee_partials/po_home_post_sponsor}}
 
               <a href="{{url}}" class="po-past-post-img"><img src="{{feature_image}}" alt="{{feature_image_alt}}"></a>
-              <span class="po-author-name">{{authors  separator=" &bull; "}}</span>
               <h2><a href="{{url}}">{{title}}</a></h2>
+              <span class="po-author-name">{{authors  separator=" &bull; "}}</span>
             </li>
             {{/foreach}}
           {{/get}}
@@ -58,9 +51,27 @@
       </div>
     </section>
 
+
+    <section class="po-highlights">
+      <h2 class="po-section-title">Selecionados</h2>
+      <ul>
+      {{#get "posts" limit="4" include="authors" featured="true" as |featured|}}
+        {{#foreach featured}}
+         <li>
+            <a href="{{url}}" alt="{{meta_description}}">
+            <img src="{{feature_image}}" alt="{{feature_image_alt}}">
+            <h3>{{title}}</h3>
+            </a>
+            <span class="po-author-name">{{authors separator=" &bull; "}}</span>
+         </li>
+        {{/foreach}}
+       {{/get}}
+      </ul>
+    </section>
+
     <div class="gh-wrapper gh-wrapper-home">
       <section class="gh-section">
-        <h2 class="gh-section-title">Últimos</h2>
+        <h2 class="po-section-title">Últimos</h2>
 
         <div class="gh-feed">
           {{#foreach posts from="2"}}
@@ -75,7 +86,7 @@
         <button class="gh-loadmore gh-btn">Carregar mais artigos</button>
       </section>
       <section class="po-home-authors-list">
-        <h2 class="gh-section-title">Autores</h2>
+        <h2 class="po-section-title">Autores</h2>
         <ul>
     {{#get 'authors' limit='all' include='count.posts' order='count.posts desc'}}
         {{#foreach authors}}
@@ -101,7 +112,7 @@
       </section>
       <aside class="gh-sidebar">
         <section class="gh-section">
-          <h2 class="gh-section-title">Vem com a gente</h2>
+          <h2 class="po-section-title">Vem com a gente</h2>
 
           <div class="gh-about">
             {{#if @site.icon}}
@@ -141,7 +152,7 @@
         {{#get "posts" filter="featured:true" limit="all" as |featured|}}
         {{#if featured}}
         <section class="gh-section">
-          <h3 class="gh-section-title">Featured</h3>
+          <h3 class="po-section-title">Featured</h3>
 
           <div class="gh-featured gh-feed">
             {{#foreach featured}}
@@ -154,7 +165,7 @@
 
         {{#get "tags" include="count.posts" limit="all" as |topic|}}
         <section class="gh-section">
-          <h3 class="gh-section-title">Topics</h3>
+          <h3 class="po-section-title">Topics</h3>
 
           <div class="gh-topic">
             {{#foreach topic}}

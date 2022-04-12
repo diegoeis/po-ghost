@@ -1,61 +1,96 @@
 {
-    "name": "product-oversee-theme",
-    "description": "Escrevemos para colaborar, experimentar e provocar a busca por novos pontos de vista, impulsionando o pensamento crítico.",
-    "version": "0.8",
-    "engines": {
-        "ghost": ">=4.0.0",
-        "ghost-api": "v4"
+  "name": "product-oversee-theme",
+  "description": "Escrevemos para colaborar, experimentar e provocar a busca por novos pontos de vista, impulsionando o pensamento crítico.",
+  "version": "1.0",
+  "engines": {
+    "ghost": ">=4.0.0",
+    "ghost-api": "v4"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Diego Eis",
+    "email": "diego@productoversee.com",
+    "url": "https://diegoeis.com/"
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme"
+  ],
+  "config": {
+    "posts_per_page": 20,
+    "image_sizes": {
+      "xs": {
+        "width": 100
+      },
+      "s": {
+        "width": 250
+      },
+      "m": {
+        "width": 720
+      },
+      "l": {
+        "width": 960
+      },
+      "xl": {
+        "width": 1200
+      },
+      "xxl": {
+        "width": 2000
+      }
     },
-    "license": "MIT",
-    "author": {
-        "name": "Diego Eis",
-        "email": "diego@productoversee.com",
-        "url": "https://diegoeis.com/"
-    },
-    "keywords": [
-        "ghost",
-        "theme",
-        "ghost-theme"
-    ],
-    "config": {
-        "posts_per_page": 20,
-        "image_sizes": {
-            "xs": {
-                "width": 100
-            },
-            "s": {
-                "width": 250
-            },
-            "m": {
-                "width": 720
-            },
-            "l": {
-                "width": 960
-            },
-            "xl": {
-                "width": 1200
-            },
-            "xxl": {
-                "width": 2000
-            }
-        },
-        "card_assets": true,
-        "custom": {
-            "title_font": {
-                "type": "select",
-                "options": ["mono", "serif"],
-                "default": "mono"
-            },
-            "body_font": {
-                "type": "select",
-                "options": ["mono", "serif"],
-                "default": "mono"
-            },
-            "featured_post_image": {
-                "type": "boolean",
-                "group": "homepage",
-                "default": true
-            }
-        }
+    "card_assets": true,
+    "custom": {
+      "title_font": {
+        "type": "select",
+        "options": ["mono", "serif"],
+        "default": "mono"
+      },
+      "body_font": {
+        "type": "select",
+        "options": ["mono", "serif"],
+        "default": "mono"
+      },
+      "featured_post_image": {
+        "type": "boolean",
+        "group": "homepage",
+        "default": true
+      },
+      "social_icons": {
+        "type": "boolean",
+        "group": "site_wide",
+        "default": true
+      },
+      "show_social_twitter": {
+        "type": "boolean",
+        "group": "site_wide",
+        "default": true
+      },
+      "show_social_instagram": {
+        "type": "boolean",
+        "group": "site_wide",
+        "default": true
+      },
+      "show_social_linkedin": {
+        "type": "boolean",
+        "group": "site_wide",
+        "default": true
+      },
+      "show_social_telegram": {
+        "type": "boolean",
+        "group": "site_wide",
+        "default": true
+      },
+      "show_social_rss": {
+        "type": "boolean",
+        "group": "site_wide",
+        "default": true
+      },
+      "switch_banners_by_hour": {
+        "type": "boolean",
+        "group": "post",
+        "default": false
+      }
     }
+  }
 }

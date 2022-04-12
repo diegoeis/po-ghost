@@ -44,11 +44,17 @@
 }
 
 .po-head-menu {
-  text-align: center;
   border: 1px solid rgba(0, 0, 0, .1);
   border-left:  none;
   border-right:  none;
 }
+
+.po-head-menu .po-head-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 
 .po-head-menu li {
   list-style: none;
@@ -64,3 +70,10 @@
   background: var(--colorRed);
   color: #fff;
 }
+
+
+.po-account {
+  padding-top: 10px;
+  font: 1.2rem/1.2 var(--fontDefault);
+}
+.po-account a {text-decoration: underline; font-weight: 600;}

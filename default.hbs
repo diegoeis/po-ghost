@@ -14,7 +14,7 @@
   {{ghost_head}}
 </head>
 
-<body class="{{body_class}} po-ghost-template is-head-b--a_n{{#match @custom.title_font "=" "serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "serif"}} has-serif-body{{/match}}">
+<body class="{{body_class}} {{#if @custom.social_icons}} with-social-link{{/if}} po-ghost-template is-head-b--a_n{{#match @custom.title_font "=" "serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "serif"}} has-serif-body{{/match}}">
   <div class="gh-site">
     
     {{> "productoversee_partials/header" }}
@@ -53,27 +53,4 @@
     </div>
     {{/if}}
 
-    <footer class="gh-foot gh-outer">
-      <div class="gh-foot-inner gh-inner">
-        <div class="gh-copyright">
-          {{@site.title}} © {{date format="YYYY"}}
-        </div>
-
-        <nav class="gh-foot-menu">
-          {{navigation type="secondary"}}
-        </nav>
-
-      </div>
-    </footer>
-  </div>
-
-  {{#is "post, page"}}
-  {{> pswp}}
-  {{/is}}
-
-  <script src="{{asset "built/main.min.js"}}"></script>
-
-  {{ghost_foot}}
-</body>
-
-</html>
+    {{> "productoversee_partials/po_footer" }}

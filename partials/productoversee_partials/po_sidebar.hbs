@@ -36,10 +36,27 @@
       </nav>
 
       <div class="po-sidebar-banner">
-        <a href="#"><img src="https://productoversee.com/images/sponsors/ituring-banner.png"></a>
+        
+        <a href="https://www.ituring.com.br/analise-de-dados-para-negocios/?utm_source=productoversee&utm_medium=comunidade&utm_campaign=adpn?utm_source=ProductOversee&utm_medium=sidebarLogo_ProductOversee&utm_campaign=parceria_ProductOversee" class="po-banner po-banner-first"><img src="{{asset "/images/sponsor/ituring-banner.png"}}"></a>
+        
+        <a href="https://www.somostera.com/?utm_source=productoversee&utm_medium=portal&utm_campaign=productoversee?utm_source=ProductOversee&utm_medium=sidebarLogo_ProductOversee&utm_campaign=parceria_ProductOversee" class="po-banner po-banner-second"><img src="{{asset "/images/sponsor/tera-banner.jpg"}}"></a>
+
       </div>
     </div>
 
   {{/is}}
   </aside>
 
+{{#if @custom.switch_banners_by_hour}} 
+<script type="text/javascript">
+  function isEven() {
+    const date = new Date();
+    const hour = date.getHours()
+    
+    if (hour % 2 == 0) {
+      document.body.classList.add("po-show-banner-second")
+    }
+  }
+  isEven();
+</script>
+{{/if}}
