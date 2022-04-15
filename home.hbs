@@ -88,7 +88,7 @@
       <section class="po-home-authors-list">
         <h2 class="po-section-title">Autores</h2>
         <ul>
-    {{#get 'authors' limit='all' include='count.posts' order='count.posts desc'}}
+    {{#get 'authors' filter='slug:-productoversee' limit='all' include='count.posts' order='count.posts desc'}}
         {{#foreach authors}}
 
           <li>

@@ -8,7 +8,7 @@
     <p class="po-article-excerpt">{{excerpt}}</p>
   </header>
 
-  {{#get 'authors' limit='all' include='count.posts' order='count.posts desc'}}
+  {{#get 'authors' filter='slug:-productoversee' limit='all' include='count.posts' order='count.posts desc'}}
     <ul class="po-authors-list">
       {{#foreach authors}}
         <li class="po-author-card">
