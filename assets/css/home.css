@@ -45,7 +45,8 @@
 }
 
 .po-home-highlight .po-featured-home p {
-		padding:  0 20px;
+	padding:  0 20px;
+	font-size: 1.4rem;
 }
 
 
@@ -102,19 +103,6 @@
 }
 
 
-@media only screen and (max-width: 900px) {
-	.po-home-highlight .po-past-posts,
-	.po-home-highlight .po-latest-posts {
-		max-width: 100%;
-		padding:  20px 0;
-	}
-	.po-home-highlight .po-past-posts .po-past-post-img {
-		height: 100%;
-	}
-	.po-home-highlight .po-featured-home {order: 1;}
-	.po-home-highlight .po-past-posts {order: 2;}
-	.po-home-highlight .po-latest-posts {order: 3;}
-}
 
 .po-home-highlight li a:hover .po-home-sponsor {opacity: 1 !important;}
 

@@ -1,15 +1,18 @@
 <header id="po-head">
   <div class="po-head-inner">
     <div class="po-head-brand">
-      <a class="po-head-logo" href="{{@site.url}}">
+      
         {{#if @site.logo}}
-        <img src="{{@site.logo}}" alt="{{@site.title}}">
+        <a class="po-head-logo" href="{{@site.url}}">
+          <img src="{{@site.logo}}" alt="{{@site.title}}">
+        </a>
         {{else}}
-        {{@site.title}}
+        <a href="{{@site.url}}">
+          {{@site.title}}
+        </a>
         {{/if}}
-      </a>
-      <button class="po-burger"></button>
     </div>
+    <span class="po-burger po-showhide-menu"></span>
 
     <div class="po-head-actions">
     
@@ -27,6 +30,8 @@
 
   <div class="po-head-menu">
     <div class="po-head-inner">
+    <span class="po-close-menu po-showhide-menu">x</span>
+
     {{navigation}}
 
       <div class="po-account">

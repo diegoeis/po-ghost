@@ -31,6 +31,22 @@
 
   <script src="{{asset "built/main.min.js"}}"></script>
 
+  <script type="text/javascript">
+    function showHideMenu() {
+      var btCloseMenu = document.querySelectorAll('.po-showhide-menu')
+
+      Array.from(btCloseMenu).forEach(btCloseMenu => {
+        btCloseMenu.addEventListener('click', function(event) {
+          console.log('clicou')
+          document.body.classList.toggle("po-show-menu")
+          event.preventDefault();
+        }); 
+      }); 
+
+    }
+  showHideMenu();
+  </script>
+
   {{ghost_foot}}
 </body>
 

@@ -1,9 +1,19 @@
 #po-head {
   border-top: 5px solid var(--colorRed);
 }
-
-.po-burger {display: none;}
-
+.po-burger {
+  background:  url(../images/burger.png) no-repeat center;
+  background-size: contain;
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  margin-top: -10px;
+  font-weight: 100;
+}
+.po-close-menu {display: none;}
 #po-head > .po-head-inner {
   padding:  30px 0;
   display: flex;
@@ -51,6 +61,7 @@
 
 .po-head-menu .po-head-inner {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -64,6 +75,7 @@
 .po-head-menu li a {
   padding: 1rem 2rem;
   display: inline-block;
+  font-size: 1.4rem;
 }
 
 .po-head-menu li a:hover {
@@ -73,7 +85,9 @@
 
 
 .po-account {
-  padding-top: 10px;
+  height: 23px;
   font: 1.2rem/1.2 var(--fontDefault);
 }
 .po-account a {text-decoration: underline; font-weight: 600;}
+
+

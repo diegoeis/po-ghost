@@ -82,17 +82,17 @@ textarea {
     transition-duration: 0.01ms !important;
   }
 }
-html {
+/*html {
   font-size: 62.5%;
-}
+}*/
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-white);
   color: var(--color-primary-text);
-  font-family: var(--font-sans);
-  font-size: 1.6rem;
-  line-height: 1.6;
+  /*font-family: var(--font-sans);*/
+  /*font-size: 1.6rem;*/
+  /*line-height: 1.6;*/
 }
 img {
   height: auto;
