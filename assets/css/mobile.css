@@ -14,7 +14,18 @@
 	.po-show-menu .po-head-menu {
 		display: block;
 	}
-
+	.po-burger {
+	  background:  url(../images/burger.png) no-repeat center;
+	  background-size: contain;
+	  display: block;
+	  width: 20px;
+	  height: 20px;
+	  position: absolute;
+	  top: 50%;
+	  left: 20px;
+	  margin-top: -10px;
+	  font-weight: 100;
+	}
 	.po-close-menu {
 		display: block;
     position: absolute;
