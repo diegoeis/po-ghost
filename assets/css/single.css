@@ -46,6 +46,7 @@
 .po-content ul,
 .po-content ol {
 	margin: 25px 20px;
+	font: 1.6rem/1.5 var(--fontSansSerif);
 }
 
 .po-content p {
