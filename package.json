@@ -1,7 +1,7 @@
 {
   "name": "product-oversee-theme",
   "description": "Escrevemos para colaborar, experimentar e provocar a busca por novos pontos de vista, impulsionando o pensamento crítico.",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "engines": {
     "ghost": ">=4.0.0",
     "ghost-api": "v4"

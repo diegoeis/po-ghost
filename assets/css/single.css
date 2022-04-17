@@ -102,7 +102,7 @@
 /***
  * Sidebar post
 ***/
-
+.po-article-sidebar:empty{display: none;}
 .po-sidebar-title {
 	font: 600 2.5rem/1.2 var(--fontDefault);
 	border-bottom: 1px solid var(--colorGrayLight);
