@@ -4,21 +4,20 @@
 
 <section class="gh-cta">
     {{#has visibility="paid"}}
-        <h4 class="gh-cta-title">Este post é apenas para assinates dos nossos planos pagos.</h4>
+        <h4 class="gh-cta-title">Você pode ler esse texto assinando um de nossos planos pagos.</h4>
+        <div class="gh-cta-actions">
+            <button class="gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Assine aqui</button>
+            <span class="gh-cta-link" href="#/portal/signin" data-portal="signin">Já é assinante? Entre aqui.</span>
+        </div>
     {{/has}}
     {{#has visibility="members"}}
-        <h4 class="gh-cta-title">Este post é apenas para inscritos.</h4>
+        <h4 class="gh-cta-title">Você pode ler esse texto se inscrevendo gratuitamente aqui no portal.</h4>
+        <div class="gh-cta-actions">
+            <button class="gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Inscreva-se aqui</button>
+            <span class="gh-cta-link" href="#/portal/signin" data-portal="signin">Já é inscrito? Entre aqui.</span>
+        </div>
     {{/has}}
     {{#has visibility="filter"}}
         <h4 class="gh-cta-title">Este é um post para os assinantes de {{products}}.</h4>
     {{/has}}
-
-    <div class="gh-cta-actions">
-        {{#if @member}}
-            <button class="gh-btn gh-primary-btn" href="#/portal/account/plans" data-portal="account/plans">Assine agora</button>
-        {{else}}
-            <button class="gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Assine agora</button>
-            <span class="gh-cta-link" href="#/portal/signin" data-portal="signin">Já tem uma conta? Entre aqui.</span>
-        {{/if}}
-    </div>
 </section>
