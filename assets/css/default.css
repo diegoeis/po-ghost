@@ -55,6 +55,14 @@ a:hover h1 {
   color: #fff;
 }
 
+.kg-card.kg-button-card .kg-btn {
+  font-size: 2rem;
+}
+
+.kg-button-card {
+  margin-top:  20px;
+}
+
 .po-limit-container {
   max-width: 1200px;
   margin: auto;

@@ -52,6 +52,15 @@
 .po-content p {
 	font: 1.7rem/1.5 var(--fontSansSerif);
 	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+blockquote {
+	font-size: 2rem;
+	font-style: italic;
+	margin: 35px 0;
+  border-left: 4px solid var(--ghost-accent-color);
+  padding-left: 2rem;
 }
 
 .po-content h1,
