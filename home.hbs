@@ -73,6 +73,7 @@
       <section class="gh-section">
         <h2 class="po-section-title">Últimos</h2>
 
+
         <div class="gh-feed">
           {{#foreach posts from="2"}}
           {{> loop}}
@@ -80,7 +81,7 @@
         </div>
 
         {{#match posts.length "=" 1}}
-        Additional issues will be published soon.
+        Mais artigos serão publicados em breve. Quer receber primeiro? <a href="https://productoversee.com/#/portal/signup">Assine nossa newsletter</a>.
         {{/match}}
 
         <button class="gh-loadmore gh-btn">Carregar mais artigos</button>
