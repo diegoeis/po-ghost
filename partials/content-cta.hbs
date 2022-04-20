@@ -4,20 +4,22 @@
 
 <section class="gh-cta">
     {{#has visibility="paid"}}
-        <h4 class="gh-cta-title">Você pode ler esse texto assinando um de nossos planos pagos.</h4>
+        <h4 class="gh-cta-title">Este conteúdo é apenas para assinates dos nossos planos pagos. Esses membros contribuem para que o projeto continue existindo.</h4>
+
         <div class="gh-cta-actions">
             <button class="gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Assine aqui</button>
             <span class="gh-cta-link" href="#/portal/signin" data-portal="signin">Já é assinante? Entre aqui.</span>
         </div>
     {{/has}}
     {{#has visibility="members"}}
-        <h4 class="gh-cta-title">Você pode ler esse texto se inscrevendo gratuitamente aqui no portal.</h4>
+        <h4 class="gh-cta-title">Este conteúdo é apenas para membros inscritos em qualquer plano (pagos ou gratuitos).</h4>
+
         <div class="gh-cta-actions">
             <button class="gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Inscreva-se aqui</button>
             <span class="gh-cta-link" href="#/portal/signin" data-portal="signin">Já é inscrito? Entre aqui.</span>
         </div>
     {{/has}}
     {{#has visibility="filter"}}
-        <h4 class="gh-cta-title">Este é um post para os assinantes de {{products}}.</h4>
+        <h4 class="gh-cta-title">Este conteúdo é para os assinantes de {{products}}.</h4>
     {{/has}}
 </section>
