@@ -1,21 +1,20 @@
-<article class="gh-card {{post_class}}">
-  <a class="gh-card-link" href="{{url}}">
-    <header class="gh-card-header">
-      <h2 class="gh-card-title">{{title}}</h2>
+<div class="po-loop-card {{post_class}}">
+  
+  <a class="po-loop-link" href="{{url}}">
+    <header>
+      <h2 class="po-title">{{title}}</h2>
+      <p class="po-excerpt">{{excerpt}}</p>
     </header>
 
-    <div class="gh-card-excerpt">{{excerpt}}</div>
-
-    <footer class="gh-card-meta">
-      <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+    <footer>
+      <time class="po-loop-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
       —
-      <span class="gh-card-meta-wrapper">
         <span class="gh-card-duration">{{reading_time}}</span>
 
         {{^has visibility="public"}}
         {{> icons/star}}
         {{/has}}
-      </span>
     </footer>
   </a>
-</article>
+
+</div>

@@ -17,7 +17,7 @@
 
 
 .po-article-title {
-	font: 900 5rem/1.2 var(--fontDefault);
+	font: 800 5rem/1.2 var(--fontMono);
 	padding-bottom: 30px;
 }
 
@@ -44,15 +44,18 @@
 }
 
 .po-content ul,
+.po-content ol,
+.po-content p {
+	font: 1.8rem/1.5 var(--fontSansSerif);
+}
+
+.po-content ul,
 .po-content ol {
 	margin: 25px 20px;
-	font: 1.6rem/1.5 var(--fontSansSerif);
 }
 
 .po-content p {
-	font: 1.7rem/1.5 var(--fontSansSerif);
-	margin-top: 20px;
-	margin-bottom: 10px;
+	margin: 20px 0 10px;
 }
 
 blockquote {
@@ -69,6 +72,7 @@ blockquote {
 .po-content h4,
 .po-content h5,
 .po-content h6 {
+	font-family: var(--fontMono);
 	margin-top: 30px;
 }
 
@@ -113,7 +117,7 @@ blockquote {
 ***/
 .po-article-sidebar:empty{display: none;}
 .po-sidebar-title {
-	font: 600 2.5rem/1.2 var(--fontDefault);
+	font: 600 2.5rem/1.2 var(--fontMono);
 	border-bottom: 1px solid var(--colorGrayLight);
 	padding:  15px 0;
 	margin: 0 0 15px;
@@ -124,9 +128,8 @@ blockquote {
 }
 
 .po-article-sidebar li {
-	line-height: 1.2;
-	margin-bottom: 10px;
-	font-size: 1.5rem;
+	margin-bottom: 13px;
+	font: 1.8rem/1.4 var(--fontSansSerif);
 }
 
 

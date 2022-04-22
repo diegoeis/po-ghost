@@ -117,12 +117,12 @@
           <h2 class="po-section-title">Vem com a gente</h2>
 
           <div class="gh-about">
-            {{#if @site.icon}}
+<!--             {{#if @site.icon}}
             <img class="gh-about-icon" src="{{@site.icon}}" alt="{{@site.title}}">
             {{/if}}
-
+ -->
             <section class="gh-about-wrapper">
-              <h3 class="gh-about-title">{{@site.title}}</h3>
+              <!-- <h3 class="gh-about-title">{{@site.title}}</h3> -->
 
               {{#if @site.description}}
               <p class="gh-about-description">{{@site.description}}</p>
@@ -174,7 +174,7 @@
             <a class="gh-topic-item" href="{{url}}">
               <h3 class="gh-topic-name">{{name}}</h3>
               <span class="gh-topic-count">
-                {{plural count.posts empty="0 issues" singular="% issue" plural="% issues"}}
+                {{plural count.posts empty="0 posts" singular="% post" plural="% posts"}}
               </span>
             </a>
             {{/foreach}}
