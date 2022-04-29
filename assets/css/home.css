@@ -154,3 +154,31 @@
 a:not(.kg-btn):not(.kg-product-card-button):hover {
   opacity: 1 !important;
 }
+
+
+.po-topic-item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.po-topic-item + .po-topic-item {
+  margin-top: 1.6rem;
+}
+
+.po-topic-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.po-topic-item:hover .po-topic-name {color: var(--colorRed);}
+
+
+.po-topic-count {
+  border: 1px solid var(--color-light-gray);
+  border-radius: 32px;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0.4rem 0.8rem;
+}

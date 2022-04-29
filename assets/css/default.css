@@ -112,12 +112,13 @@ a:hover h1 {
 }
 
 .po-home-authors-list h4 {
-  font: 700 1.7rem var(--fontDefault);
+  font: 700 1.5rem var(--fontDefault);
   text-transform: uppercase;
 }
 
 .po-home-authors-list p {
-  font: 1.5rem/1.4 var(--fontSansSerif);
+  font: 1.4rem/1.4 var(--fontSansSerif);
+  padding-top: 4px;
 }
 
 
@@ -125,20 +126,20 @@ a:hover h1 {
 * LOOP CARD
 */
 .po-loop-card {
-  margin: 0 0 40px;
+  margin: 0 0 50px;
 }
 
 .po-loop-card .po-title {
-  font: 700 2.5rem/1.4 var(--fontMono);
+  font: 700 2.3rem/1.4 var(--fontMono);
 }
 
 .po-loop-card .po-excerpt {
-  font: 1.8rem/1.4 var(--fontSansSerif);
+  font: 1.6rem/1.4 var(--fontSansSerif);
   padding: 10px 0;
 }
 
 .po-loop-card footer {
-  font: 1.8rem/1.4 var(--fontSansSerif);
+  font: 1.3rem/1.4 var(--fontSansSerif);
   text-transform: uppercase;
   color:  var(--colorRed);
 }
@@ -236,6 +237,7 @@ a:hover h1 {
   padding: 5px 10px;
   border-radius: 3px;
   text-decoration: none !important;
+  border: 1px solid transparent;
   display: inline-block;
 }
 

@@ -76,7 +76,6 @@
 
 
 .po-account {
-  height: 23px;
   font: 1.2rem/1.2 var(--fontDefault);
 }
 .po-account a {text-decoration: underline; font-weight: 600;}

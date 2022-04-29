@@ -21,9 +21,8 @@
       <p class="po-article-excerpt">{{custom_excerpt}}</p>
       {{/if}}
         
-        {{#primary_author}}
-          <span class="po-article-author">Por <a href="{{url}}">{{name}}</a></span>
-        {{/primary_author}}
+        <span class="po-article-author">{{authors separator=", " prefix="Por "}}</span>
+
       </div>
       {{#if feature_image}}
       <figure class="gh-article-image">
