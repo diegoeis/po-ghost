@@ -1,0 +1,33 @@
+{{!< default}}
+    {{#post}}
+
+
+<style type="text/css">
+  
+table {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+td {
+  padding:  10px;
+  border-bottom: 1px solid black;
+}
+
+</style>
+
+{{#get "posts" limit="all" include="authors"}}
+<table id="list">
+  {{#foreach posts}}
+    <tr>
+        <td>{{ authors }}</td>
+        <td><a href="{{url}}">{{title}}</a></td> 
+        <td style="width:100px;">{{date format="DD-MM-YYYY"}}</td>
+        <td>{{custom_excerpt}}</td>
+     </tr>
+  {{/foreach}}
+</table>
+{{/get}}
+
+{{/post}}
