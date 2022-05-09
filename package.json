@@ -1,7 +1,7 @@
 {
   "name": "product-oversee-theme",
   "description": "Escrevemos para colaborar, experimentar e provocar a busca por novos pontos de vista, impulsionando o pensamento crítico.",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "engines": {
     "ghost": ">=4.0.0",
     "ghost-api": "v4"
@@ -87,6 +87,11 @@
         "default": true
       },
       "single_show_featured_img": {
+        "type": "boolean",
+        "group": "post",
+        "default": false
+      },
+      "single_invert_sidebar_article": {
         "type": "boolean",
         "group": "post",
         "default": false

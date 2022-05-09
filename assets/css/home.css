@@ -127,7 +127,7 @@
 }
 
 .po-highlights li {
-  flex: 1;
+  flex: 1 200px;
   padding: 0 10px;
 }
 
