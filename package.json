@@ -86,7 +86,7 @@
         "group": "site_wide",
         "default": true
       },
-      "switch_banners_by_hour": {
+      "single_show_featured_img": {
         "type": "boolean",
         "group": "post",
         "default": false
