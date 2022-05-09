@@ -1,5 +1,6 @@
 .post-template .gh-main {padding-top: 7rem !important;}
 
+.po-content .kg-callout-card {font-size: 1.5rem; }
 
 .po-article-header .po-limit-container {
   padding-bottom: 5rem;
@@ -17,16 +18,24 @@
 
 .po-article-meta a {text-transform: uppercase;}
 
+.po-article-header .po-article-meta {margin-bottom: 0;}
+
 .po-author-website {
 	overflow-wrap: anywhere;
   line-height: 1.3;
 }
 
 .po-article-title {
-	font: 600 4rem/1.2 var(--fontMono);
-	max-width: 800px;
-	padding: 20px 0;
+	font: 500 4.5rem/1.2 var(--fontMono);
+	max-width: 930px;
+	padding: 30px 0;
 	text-transform: uppercase;
+}
+
+.po-article-title:after {
+	content: "_";
+	display: inline-block;
+	color: var(--colorRed);
 }
 
 .po-article-excerpt {
