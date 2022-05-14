@@ -50,6 +50,9 @@ a:hover h1 {
   color: var(--colorRed);
 }
 
+.home-template #st-2{display: none;}
+.st-btn img {display: inline-block !important; vertical-align: middle;}
+
 .gh-btn:hover {
   background-color: black;
   color: #fff;
