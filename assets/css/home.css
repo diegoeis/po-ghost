@@ -149,12 +149,9 @@
 	left: 5px;
 }
 
-
-
 a:not(.kg-btn):not(.kg-product-card-button):hover {
   opacity: 1 !important;
 }
-
 
 .po-topic-item {
   align-items: center;
