@@ -7,8 +7,6 @@
           {{#get "posts" limit="all" include="authors"}}
             {{#foreach posts from=15 limit=2}}
             <li>
-          {{> productoversee_partials/po_home_post_sponsor}}
-
               <a href="{{url}}" class="po-past-post-img"><img src="{{feature_image}}" alt="{{feature_image_alt}}"></a>
               <h2><a href="{{url}}">{{title}}</a></h2>
               <span class="po-author-name">{{authors separator=" &bull; "}}</span>
