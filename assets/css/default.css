@@ -314,8 +314,30 @@ a:hover h1 {
 
 
 
+.po-boxes-list {
+  display:  flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  list-style: none;
+}
 
+.po-boxes-list li {
+  list-style: none;
+  flex: 1 200;
+  padding:  0 10px;
+}
 
+.po-box {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  font-size: 2.5rem !important;
+  flex: 1 200;
+}
+
+.po-box img {
+  margin-bottom: 10px;
+}
 
 
 

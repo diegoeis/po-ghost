@@ -1,4 +1,4 @@
-.post-template .gh-main {padding-top: 7rem !important;}
+.post-template .gh-main {padding-top: 6rem !important;}
 
 .po-content .kg-callout-card {font-size: 1.5rem; }
 
@@ -28,7 +28,7 @@
 .po-article-title {
 	font: 500 4.5rem/1.4 var(--fontMono);
 	max-width: 930px;
-	padding: 30px 0;
+	padding: 10px 0 30px;
 	text-transform: uppercase;
 }
 

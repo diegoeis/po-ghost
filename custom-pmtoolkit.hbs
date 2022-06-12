@@ -1,0 +1,80 @@
+{{!< default}}
+  {{#post}}
+
+
+  <article class="po-article {{post_class}} {{#if @custom.single_invert_sidebar_article}}po-inverted-sidebar{{/if}}">
+    <header class="po-article-header">
+      <div class="po-limit-container">
+
+       <h1 class="po-article-title">{{title}}</h1>
+
+      {{#if custom_excerpt}}
+      <p class="po-article-excerpt">{{custom_excerpt}}</p>
+      {{/if}}
+        
+
+      </div>
+      {{#if @custom.single_show_featured_img}}
+        {{#if feature_image}}
+        <figure class="gh-article-image">
+          <img
+          srcset="{{img_url feature_image size="s"}} 300w,
+          {{img_url feature_image size="m"}} 720w,
+          {{img_url feature_image size="l"}} 960w,
+          {{img_url feature_image size="xl"}} 1200w,
+          {{img_url feature_image size="xxl"}} 2000w"
+          sizes="(max-width: 1200px) 100vw, 1200px"
+          src="{{img_url feature_image size="xl"}}"
+          alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+          >
+          {{#if feature_image_caption}}
+          <figcaption>{{feature_image_caption}}</figcaption>
+          {{/if}}
+        </figure>
+        {{/if}}
+      {{/if}}
+
+    </header>
+
+    <section class="po-text">
+
+      <div class="po-content">
+
+
+        <h2>Alguns conteúdos abertos feitos por nós:</h2>
+
+        <nav>
+          
+          <ul class="po-boxes-list">
+            <li>
+              <a href="https://docs.google.com/presentation/d/1V92R6muinqwVygJSRhWHfNjfwvla_bt9U0nhUsAhMqk/edit#slide=id.g126a14e93f8_0_786" class="po-box">
+                <img src="https://images.unsplash.com/photo-1537237858032-3ad1b513cbcc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80">
+                Slides
+              </a>
+            </li>
+            <li>
+              <a href="https://miro.com/app/board/o9J_lf2HMtA=/?invite_link_id=260017868549" class="po-box">
+              <img src="https://images.unsplash.com/photo-1591381287254-b3349c60bf9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80">
+              Miro
+              </a>
+            </li>
+            <li>
+              <a href="https://drive.google.com/drive/folders/16vO-N4DzFBliR6Dso5Cx-sZ9fj8GWBYc?usp=sharing" class="po-box">
+                <img src="https://images.unsplash.com/photo-1617360547704-3da8b5363369?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80">
+                Drive
+              </a>
+            </li>
+          </ul>
+
+        </nav>
+
+        <hr>
+
+        {{content}}
+
+      </div>
+    </section>
+
+  </article>
+
+{{/post}}

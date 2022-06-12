@@ -12,6 +12,7 @@
         </a>
         {{/if}}
     </div>
+
     <span class="po-burger po-showhide-menu"></span>
 
     <div class="po-head-actions">
@@ -43,8 +44,10 @@
         ou 
         <a href="#/portal/signin" data-portal="signin">Entrar</a>
         {{else}}
-        <a class="po-btn" href="#/portal/account" data-portal="account">Conta</a> ou <a href="javascript:" data-members-signout>Sair</a>
-        {{/unless}} 
+          <a class="po-btn" href="#/portal/account" data-portal="account">Conta</a> ou 
+          <a href="/area-exclusiva">Área exclusiva</a>
+          <!-- <a href="javascript:" data-members-signout>Sair</a> -->
+        {{/unless}}
       </div>
     </div>
   </div>
