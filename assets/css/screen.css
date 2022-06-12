@@ -172,12 +172,17 @@ code {
   color: var(--ghost-accent-color);
   padding: 0.4rem;
 }
+
+figure iframe {
+  height: 400px;
+}
 iframe {
   border: 0;
   display: block;
   overflow: hidden;
   width: 100%;
 }
+
 @media (max-width: 767px) {
   h2 {
     font-size: 2.4rem;
