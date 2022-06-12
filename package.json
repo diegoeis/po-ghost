@@ -2,10 +2,6 @@
   "name": "product-oversee-theme",
   "description": "Escrevemos para colaborar, experimentar e provocar a busca por novos pontos de vista, impulsionando o pensamento crítico.",
   "version": "1.0.16",
-  "engines": {
-    "ghost": ">=4.0.0",
-    "ghost-api": "v4"
-  },
   "license": "MIT",
   "author": {
     "name": "Diego Eis",
@@ -95,11 +91,6 @@
         "type": "boolean",
         "group": "post",
         "default": false
-      },
-      "single_social_float_buttons": {
-        "type": "boolean",
-        "group": "post",
-        "default": true
       },
       "sidebar_banner": {
         "type": "boolean",
