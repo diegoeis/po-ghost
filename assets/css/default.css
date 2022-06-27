@@ -50,6 +50,9 @@ a:hover h1 {
   color: var(--colorRed);
 }
 
+.gh-subscribe-input {max-width: 30% !important;}
+
+
 .home-template #st-2{display: none;}
 .st-btn img {display: inline-block !important; vertical-align: middle;}
 
