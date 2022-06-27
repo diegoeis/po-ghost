@@ -33,9 +33,9 @@
       {{/get}}
         </ul>
       </nav>
-
-      {{> productoversee_partials/po_sidebar_banner}}
-
+        {{#unless @member}}
+          {{> productoversee_partials/po_sidebar_banner}}
+        {{/unless}}
 
     </div>
 

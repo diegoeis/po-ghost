@@ -25,7 +25,16 @@
         {{#if @custom.show_social_rss}}<li class="po-social-rss"><a target="_new" data-event="lnk-rss-header" href="{{site_url}}/rss/">RSS</a></li>{{/if}}
       </ul>
 
-      {{navigation type="secondary"}}
+        {{#unless @member}}
+          {{navigation type="secondary"}}
+        {{else}}
+          <ul class="nav">
+            <li class="nav-area-exclusiva"><a href="/area-exclusiva/">Área Exclusiva</a></li>
+            <li class="nav-pm-toolkit"><a href="/pm-toolkit/">PM Toolkit</a></li>
+            <li class="nav-slides"><a href="https://bit.ly/slides-diegoeis-po">Slides</a></li>
+            <li class="nav-escreva-conosco"><a href="/escreva-conosco/">Escreva conosco</a></li>
+          </ul>
+        {{/unless}}
     </div>
   </div>
 
@@ -45,8 +54,8 @@
         <a href="#/portal/signin" data-portal="signin">Entrar</a>
         {{else}}
           <a class="po-btn" href="#/portal/account" data-portal="account">Conta</a> ou 
-          <a href="/area-exclusiva">Área exclusiva</a>
-          <!-- <a href="javascript:" data-members-signout>Sair</a> -->
+          <!-- <a href="/area-exclusiva">Área exclusiva</a> -->
+          <a href="javascript:" data-members-signout>Sair</a>
         {{/unless}}
       </div>
     </div>
