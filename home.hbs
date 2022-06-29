@@ -7,7 +7,7 @@
           {{#get "posts" limit="all" include="authors"}}
             {{#foreach posts from=15 limit=2}}
             <li>
-              <a href="{{url}}" class="po-past-post-img"><img src="{{feature_image}}" alt="{{feature_image_alt}}"></a>
+              <a href="{{url}}" data-event="po-home-past-posts" class="po-past-post-img"><img src="{{feature_image}}" alt="{{feature_image_alt}}"></a>
               <h2><a href="{{url}}">{{title}}</a></h2>
               <span class="po-author-name">{{authors separator=" &bull; "}}</span>
             </li>
@@ -22,10 +22,10 @@
 
           {{> productoversee_partials/po_home_post_sponsor}}
 
-            <a href="{{url}}">
+            <a href="{{url}}" data-event="po-featured-post-image">
               <img src="{{feature_image}}" alt="{{feature_image_alt}}">
             </a>
-            <a href="{{url}}" class="po-featured-link">
+            <a href="{{url}}" data-event="po-featured-post-title" class="po-featured-link">
               <h1>{{title}}</h1>
               <p>{{excerpt}}</p>
             </a>
@@ -39,7 +39,7 @@
           {{#get "posts" limit="all" include="authors"}}
             {{#foreach posts from=2 limit=4}}
             <li>
-              <a href="{{url}}" class="po-latest-post-img"><img src="{{feature_image}}" alt="{{feature_image_alt}}"></a>
+              <a href="{{url}}" data-event="po-recent-posts" class="po-latest-post-img"><img src="{{feature_image}}" alt="{{feature_image_alt}}"></a>
               <h3><a href="{{url}}">{{title}}</a></h3>
               <span class="po-author-name">{{authors  separator=" &bull; "}}</span>
             </li>
@@ -57,7 +57,7 @@
         {{#get "posts" include="tags,authors" filter="featured:true" limit="4" as |featured|}}
         {{#foreach featured}}
         <li>
-          <a href="{{url}}" alt="{{meta_description}}">
+          <a href="{{url}}" data-event="po-selected-posts" alt="{{meta_description}}">
             <img src="{{feature_image}}" alt="{{feature_image_alt}}">
             <h3>{{title}}</h3>
           </a>
@@ -92,7 +92,7 @@
         {{#foreach authors}}
 
           <li>
-            <a class="post-card-image-link" href="{{url}}">
+            <a class="post-card-image-link" data-event="po-home-author-link" href="{{url}}">
             {{#if profile_image}}
               <figure>
                 <img src="{{profile_image}}">
