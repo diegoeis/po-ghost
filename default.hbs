@@ -15,7 +15,9 @@
   {{ghost_head}}
 </head>
 
-<body class="{{body_class}} {{#if @custom.social_icons}} with-social-link{{/if}} po-ghost-template is-head-b--a_n{{#match @custom.title_font "=" "serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "serif"}} has-serif-body{{/match}}">
+<body class="{{body_class}} {{#if @custom.social_icons}} with-social-link{{/if}} po-ghost-template is-head-b--a_n{{#match @custom.title_font "=" "serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "serif"}} has-serif-body{{/match}}" data-member="{{#if @member.paid}}po-paid-member{{/if}}{{^if @member.paid}}{{^if @member}}po-not-member{{else}} po-free-member {{/if}}{{/if}}">
+
+
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRH8LC5"
