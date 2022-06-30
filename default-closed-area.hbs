@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{meta_title}} - {{meta_description}}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@100;400;700&Open+Sans:wght@300;400;700&family=Azeret+Mono:wght@100;300;400;600,700,900&family=Noto+Serif+Display:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{asset "po-closed-area-assets/all.css"}}&{{date format="SS"}}">
+
+  {{ghost_head}}
+</head>
+
+<body class="{{body_class}} {{#if @custom.social_icons}} with-social-link{{/if}} po-ghost-template is-head-b--a_n{{#match @custom.title_font "=" "serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "serif"}} has-serif-body{{/match}}" data-member="{{#if @member.paid}}po-paid-member{{/if}}{{^if @member.paid}}{{^if @member}}po-not-member{{else}}po-free-member{{/if}}{{/if}}">
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRH8LC5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
+
+
+
+<div class="po-closed-container">
+  
+  <div class="po-closed-nav">
+    <h1>área exclusiva Product Oversee</h1>
+    <nav class="po-closed-menu">
+      <ul>
+        <li><a href="/area-exclusiva-videos">Videos</a></li>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Descontos</a></li>
+        <li><a href="#">Calendário</a></li>
+      </ul>
+    </nav>
+
+    <div class="po-closed-nav-footer">
+      <!-- <a href="#">Portal</a> -->
+    </div>
+
+  </div>
+
+  <div class="po-closed-content">
+    {{{body}}}
+
+  </div>
+
+</div>
+
+
+

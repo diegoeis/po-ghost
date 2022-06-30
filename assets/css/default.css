@@ -9,9 +9,9 @@
   --fontDefault: "Azeret Mono", "The Future Mono 02", monospace;
   --fontSerif: "Noto Serif Display", "Times New Roman", Times, serif;
   --fontMono: "Azeret Mono", "The Future Mono 02", monospace;
-  --fontSansSerif: "Roboto Flex", Inter, "Open Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  --fontSansSerif: "Roboto Flex", "Open Sans", Helvetica, Arial, sans-serif;
+  --font-sans: "Roboto Flex", "Open Sans", Helvetica, Arial, sans-serif;
   --fontArticle: "Open Sans", arial, helvetica, sans-serif;
-  --font-sans: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -100,9 +100,6 @@ a:hover h1 {
   align-self: flex-start;
 }
 
-.po-home-authors-list li div {
-
-}
 
 .po-home-authors-list img {
   max-width: 70px;
