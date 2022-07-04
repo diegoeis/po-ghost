@@ -23,6 +23,9 @@
   flex:  1;
 }
 
+.po-head-brand {flex: 1;}
+.po-head-actions {flex: 1 0 500px;}
+
 .po-head-logo img {
   max-width:  170px;
 }
