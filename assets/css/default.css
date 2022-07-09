@@ -50,8 +50,8 @@ a:hover h1 {
   color: var(--colorRed);
 }
 
-.gh-subscribe-input {max-width: 30% !important;}
-
+.gh-subscribe-input {max-width: 225px !important; text-decoration: none;}
+.gh-subscribe-input-btn {color: inherit}
 
 .home-template #st-2{display: none;}
 .st-btn img {display: inline-block !important; vertical-align: middle;}

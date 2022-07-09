@@ -66,6 +66,29 @@
         </ul>
         {{/if}}
 
+
+        <div class="po-call-bemember">
+          {{^if @member}}
+          <h3>Inscreva-se na nossa newsletter!</h3>
+
+          <p>Publicamos novos textos na newsletter todas às quartas 7h45 na sua caixa de entrada.</p>
+
+          <a class="gh-subscribe-input" href="#/portal/signup" data-portal="signup" data-event="clk-signup-artigo">
+            <div class="gh-subscribe-input-text">
+              {{> icons/email}}
+            </div>
+            <div class="gh-subscribe-input-btn">Inscreva-se agora</div>
+          </a>
+          {{else}}
+          <h3>Já é membro da newsletter? Tenha acesso ilimitado agora!</h3>
+
+          <p>Ajude a manter o projeto! Faça um upgrade da sua conta. Membros pagantes participam de palestras exclusivas, sessões de QA& e Mentorias em Grupo, além de descontos em cursos.</p>
+
+          <a class="gh-subscribe-btn gh-btn gh-primary-btn" data-event="clk-signup-artigo" href="#/portal/account/plans" data-portal="account/plans">Torne-se membro agora!</a>
+          {{/if}}
+        </div>  
+
+
         {{> productoversee_partials/po_sponsor}}
 
       </div>
