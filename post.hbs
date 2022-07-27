@@ -5,24 +5,23 @@
   <article class="po-article {{post_class}} {{#if @custom.single_invert_sidebar_article}}po-inverted-sidebar{{/if}}">
     <header class="po-article-header">
       <div class="po-limit-container">
-
-{{#is "post"}}
-        <span class="po-article-meta">
-          {{#if tags}}
-          <span class="po-tags-post-list">{{tags separator=", " prefix="em "}}</span>
-          {{/if}}
-          —
-          <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-        </span>
-        {{/is}}
-       <h1 class="po-article-title">{{title}}</h1>
+       <h2 class="po-article-title">{{title}}</h2>
 
       {{#if custom_excerpt}}
       <p class="po-article-excerpt">{{custom_excerpt}}</p>
       {{/if}}
-        
-      <span class="po-article-author">{{authors separator=" &bull; " prefix="Por "}}</span>
-
+       
+{{#is "post"}}
+<span class="po-article-meta">
+  {{authors separator=" &bull; " prefix="por "}}, 
+  {{#if tags}}
+  <span class="po-tags-post-list">{{tags separator=", " prefix="em "}}</span>
+  {{/if}}
+  —
+  <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+</span>
+{{!-- <span class="po-article-author"></span> --}}
+{{/is}}
       </div>
       {{#if @custom.single_show_featured_img}}
         {{#if feature_image}}
